@@ -50,7 +50,7 @@ BELOVED_PYTHON_VERSION="anaconda-2.0.1"
 CURRENT_STABLE_PYTHON_VERSION="3.6.3"
 
 # NOT BEING USED YET, BUT SHOULD!
-NODE_VERSION="stable" # using nvm's language...
+NODE_VERSION="8.9.1" # using nvm's language...
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   SYSTEM="mac"
