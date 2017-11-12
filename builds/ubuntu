@@ -57,7 +57,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   BASH_FILE=".bash_profile"
   MINIMUM_MAC_OS="10.7.0"
 else
-  SYSTEM="ubuntu"
+  SYSTEM="linux"
   BASH_FILE=".bashrc"
 fi
 
