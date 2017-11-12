@@ -39,9 +39,11 @@ bash <(curl -sL https://raw.githubusercontent.com/GA-WDI/installfest/master/buil
 
 ##### ~~For Ubuntu Linux~~
 
-~~Paste this script into a Terminal prompt:~~
+Paste this script into a Terminal prompt:
 
-~~`bash <(wget -qO- https://raw.githubusercontent.com/GA-WDI/installfest/master/builds/ubuntu)`~~
+```
+bash <(wget -qO- https://raw.githubusercontent.com/lizrodriguez/installfest/master/builds/ubuntu)
+```
 
 *Sadly, the Ubuntu script is out of date and is not currently 
 supported. If you'd like to help get it back in to working order, let us
