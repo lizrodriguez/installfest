@@ -565,7 +565,11 @@ if [[ -e "$NVM_DIR" ]]; then
   show "Already installed. Moving on..."
 else
   # install Node Version Manager
-  git clone https://github.com/creationix/nvm.git "$NVM_DIR" && cd "$NVM_DIR" && git checkout `git describe --abbrev=0 --tags`
+  #git clone https://github.com/creationix/nvm.git "$NVM_DIR" && cd "$NVM_DIR" && git checkout `git describe --abbrev=0 --tags`
+  curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
+
+  bash install_nvm.sh
+
   show "Complete!"
 fi
 
@@ -589,7 +593,7 @@ show "Complete!"
 
 # Google Chrome.........The Browser
 # HipChat...............The Chat Client
-# Sublime Text 2........The Text Editor
+# Sublime Text 3........The Text Editor
 
 # chrome
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
