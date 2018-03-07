@@ -321,29 +321,29 @@ inform "Checking for XCode Command Line Tools..." true
 #esac
 
 # Check for Command Line Tools based on OS versions
-if [ ! -z $(pkgutil --pkgs=com.apple.pkg.$cmdline_version) ]; then
+#if [ ! -z $(pkgutil --pkgs=com.apple.pkg.$cmdline_version) ]; then
   show "Command Line Tools are installed!"
-elif [[ $OS_VERSION == *10.6** ]]; then
-  fail "Command Line Tools are not installed!" true
-  fail "  Downloading and installing the GCC compiler."
-  fail "  When you're done rerun the Installfest script..."
-  curl -OLk https://github.com/downloads/kennethreitz/osx-gcc-installer/GCC-10.6.pkg
-  open GCC-10.6.pkg
-  exit 1
-elif [[ $OS_VERSION == *10.7* ]] || [[ $OS_VERSION == *10.8* ]]; then
-  fail "Command Line Tools are not installed!" true
-  fail "Register for a Developer Account"
-  fail "  Download the Command Lion Tools from:"
-  fail "    https://developer.apple.com/downloads/index.action"
-  fail "  and then rerun the Installfest script..."
-  exit 1
-else
-  fail "Command Line Tools are not installed!" true
-  fail "  Running 'xcode-select --install' Please click continue!"
-  fail "  After installing please rerun the Installfest script..."
-  xcode-select --install
-  exit 1
-fi
+#elif [[ $OS_VERSION == *10.6** ]]; then
+#  fail "Command Line Tools are not installed!" true
+#  fail "  Downloading and installing the GCC compiler."
+#  fail "  When you're done rerun the Installfest script..."
+#  curl -OLk https://github.com/downloads/kennethreitz/osx-gcc-installer/GCC-10.6.pkg
+#  open GCC-10.6.pkg
+#  exit 1
+#elif [[ $OS_VERSION == *10.7* ]] || [[ $OS_VERSION == *10.8* ]]; then
+#  fail "Command Line Tools are not installed!" true
+#  fail "Register for a Developer Account"
+#  fail "  Download the Command Lion Tools from:"
+#  fail "    https://developer.apple.com/downloads/index.action"
+#  fail "  and then rerun the Installfest script..."
+#  exit 1
+#else
+#  fail "Command Line Tools are not installed!" true
+#  fail "  Running 'xcode-select --install' Please click continue!"
+#  fail "  After installing please rerun the Installfest script..."
+#  xcode-select --install
+#  exit 1
+#fi
 
 #-------------------------------------------------------------------------------
 # Repair disk permissions (mac/os_repair_permissions.sh)
